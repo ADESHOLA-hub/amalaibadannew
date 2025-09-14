@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="shortcut icon" href="images/logo.png">
+    <script src="https://js.paystack.co/v2/inline.js"></script>
+</head>
+<body>
+    <header class="page-header">
+        <a href="menu.html">
+            <img src="images/arrow.png" alt="back" class="arrow">
+        </a>
+        <h1>Checkout</h1>
+    </header>
+
+    <!-- Step Indicator -->
+    <div class="step-indicator">
+        <span id="step1" class="step active">1</span>
+        <span class="separator">→</span>
+        <span id="step2" class="step">2</span>
+    </div>
+
+    <main class="checkout-container">
+        <!-- Billing Info Section -->
+        <section class="billing-info" id="billingInfoSection">
+            <h2>Billing Information</h2>
+            <form id="billingForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="number">Phone Number</label>
+                    <input type="tel" id="number" placeholder="Enter your Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Delivery Address</label>
+                    <input type="text" id="address" placeholder="Enter your address" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" placeholder="Enter your city" required>
+                </div>
+                <div class="form-group">
+                    <label for="delivery-datetime">Delivery Date and Time</label>
+                    <input type="datetime-local" id="deliverydatetime" required>
+                </div>
+                
+                <button type="button" id="nextButton" class="billing-button">Next</button>
+            </form>
+        </section>
+
+        <!-- Order Details Section -->
+        <section class="order-details" id="orderDetailsSection" style="display: none;">
+            <h2>Your Order</h2>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be injected here -->
+            </div>
+            <div class="delivery-option">
+                <label for="deliveryOptions">Choose Delivery Option:</label>
+                <select id="deliveryOptions" onchange="updateTotalWithDelivery()">
+                    <option value="0">Pick Up</option>
+                    <option value="3000">Ikotun/Igando/Idimu/Egbeda ₦3,000</option>
+                    <option value="3500">Ipaja/Iyana Ipaja/Ayobo/Command ₦3,500</option>
+                    <option value="4500">Iyana iba/Akesan/Lasu ₦4,500</option>
+                    <option value="4000">Ejigbo/Isolo/Jakande estate ₦4,000</option>
+                    <option value="4500">Abule egba/Alagbado/Meiran/Iju Ishaga ₦4,500</option>
+                    <option value="5000">Ago/Okota/Amuwo Odofin/Festac 5000</option>
+                    <option value="5000">Ajao estate/Oshodi 5,000</option>
+                    <option value="6000">Surulere/Lawanson 6,000</option>
+                    <option value="6000">Mushin/Onipan/Ojuelegba/Yaba 6,000</option>
+                    <option value="5000">Ikeja/Maryland/Ogba 5000</option>
+                    <option value="7000">Ketu/Ogudu/Magodo 7,000</option>
+                    <option value="15000">Victoria Island/Lekki 15,000</option>
+                    <option value="20000">Chevron/Ajah/Sangotedo 20,000</option>
+                    <option value="13000">Ikorodu 13,000</option>
+                </select>
+            </div>
+
+            <p id="selectedOptionDisplay">Selected Delivery Option: None</p>
+
+            <div class="total-price">
+                <h3>Total Price: <span id="totalAmount">₦0.00</span></h3>
+            </div>
+            <!-- Paystack Payment Button -->
+            <button id="checkoutButton" class="checkout-button" type="button" onclick="payWithPaystack()">Pay Now</button>
+        </section>
+    </main>
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const cartItemsContainer = document.getElementById('cartItems');
+    const totalAmountElement = document.getElementById('totalAmount');
+    const deliveryOptions = document.getElementById('deliveryOptions');
+    const selectedOptionDisplay = document.getElementById('selectedOptionDisplay');
+    const nextButton = document.getElementById('nextButton');
+
+    let baseTotal = 0;
+
+    // Load cart items
+    if (cartItems.length === 0) {
+        cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+        totalAmountElement.textContent = '₦0.00';
+    } else {
+        cartItems.forEach(item => {
+            baseTotal += item.price * item.quantity;
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.innerHTML = `<p>${item.quantity} x ${item.name} - ₦${(item.price * item.quantity).toFixed(2)}</p>`;
+            cartItemsContainer.appendChild(cartItem);
+        });
+        totalAmountElement.textContent = `₦${baseTotal.toFixed(2)}`;
+    }
+
+    // Update total price and save delivery option in localStorage
+    function updateTotalWithDelivery() {
+        const deliveryFee = parseFloat(deliveryOptions.value) || 0;
+        const totalWithDelivery = baseTotal + deliveryFee;
+
+        const selectedDeliveryOption = deliveryOptions.options[deliveryOptions.selectedIndex].text;
+        localStorage.setItem('selectedDeliveryText', selectedDeliveryOption);
+        localStorage.setItem('selectedDeliveryValue', deliveryFee);
+
+        totalAmountElement.textContent = `₦${totalWithDelivery.toFixed(2)}`;
+        selectedOptionDisplay.textContent = `Selected Delivery Option: ${selectedDeliveryOption}`;
+    }
+
+    deliveryOptions.addEventListener('change', updateTotalWithDelivery);
+
+    // Display saved delivery option on page load
+    const savedDeliveryText = localStorage.getItem('selectedDeliveryText') || "None";
+    const savedDeliveryValue = parseFloat(localStorage.getItem('selectedDeliveryValue')) || 0;
+    selectedOptionDisplay.textContent = `Selected Delivery Option: ${savedDeliveryText}`;
+
+    if (savedDeliveryValue) {
+        totalAmountElement.textContent = `₦${(baseTotal + savedDeliveryValue).toFixed(2)}`;
+        deliveryOptions.value = savedDeliveryValue; 
+    }
+
+    nextButton.addEventListener('click', () => {
+        const fullName = document.getElementById('fullName').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const number = document.getElementById('number').value.trim();
+        const address = document.getElementById('address').value.trim();
+        const city = document.getElementById('city').value.trim();
+        const deliveryDateTime = document.getElementById('deliverydatetime').value.trim();
+
+        if (!fullName || !email || !number || !address || !city || !deliveryDateTime) {
+            alert("Please fill in all required fields before proceeding.");
+            return;
+        }
+
+        // Save delivery date and time
+        localStorage.setItem('deliveryDateTime', deliveryDateTime);
+
+        document.getElementById('billingInfoSection').style.display = 'none';
+        document.getElementById('orderDetailsSection').style.display = 'block';
+
+        document.getElementById('step1').classList.remove('active');
+        document.getElementById('step2').classList.add('active');
+    });
+});
+
+function payWithPaystack() {
+    const fullName = document.getElementById('fullName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const number = document.getElementById('number').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const city = document.getElementById('city').value.trim();
+    const deliveryDateTime = localStorage.getItem('deliveryDateTime');
+    const amountText = document.getElementById('totalAmount').textContent.replace('₦', '').trim();
+    const amountInKobo = Math.round(parseFloat(amountText) * 100);
+    const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+    const deliveryOption = localStorage.getItem('selectedDeliveryText');
+
+    if (!fullName || !email || !number || !address || !city || !deliveryDateTime) {
+        alert("Please fill in all required details.");
+        return;
+    }
+    if (isNaN(amountInKobo) || amountInKobo <= 0) {
+        alert("Total amount is invalid.");
+        return;
+    }
+
+    const handler = PaystackPop.setup({
+        key: 'pk_test_596e2346517f3ca50b54dc1cb025d1e2c39d0fbe',
+        email: email,
+        amount: amountInKobo,
+        currency: 'NGN',
+        ref: '' + Math.floor((Math.random() * 1000000000) + 1),
+        callback: function(response) {
+            alert('Payment successful. Transaction reference: ' + response.reference);
+
+            // Prepare receipt details
+            const receiptDetails = {
+                fullName,
+                email,
+                number,
+                address,
+                city,
+                deliverydatetime: deliveryDateTime,
+                cartItems,
+                totalAmount: amountText,
+                transactionRef: response.reference,
+                deliveryOption,
+            };
+
+            // Save receipt details in localStorage
+            localStorage.setItem('receiptDetails', JSON.stringify(receiptDetails));
+
+            // Send order details to server
+            fetch('http://localhost:3000/submit-order', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(receiptDetails),
+})
+.then(res => res.json())
+.then(data => {
+  if (data.success) {
+    window.location.href = `payment_success.html?orderId=${data.orderId}`;
+  } else {
+    alert('Failed to submit order.');
+  }
+})
+.catch(() => {
+  alert('Error submitting order.');
+});
+
+        },
+        onClose: function() {
+            alert('Transaction was not completed.');
+        }
+    });
+
+    handler.openIframe();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const deliveryInput = document.getElementById('deliverydatetime');
+
+    function setMinDateTime() {
+        const now = new Date();
+        now.setMinutes(now.getMinutes() - now.getTimezoneOffset()); 
+        const minDateTime = now.toISOString().slice(0,16); 
+        deliveryInput.min = minDateTime;
+    }
+
+    setMinDateTime();
+})
+</script>  
+</body>
+</html>

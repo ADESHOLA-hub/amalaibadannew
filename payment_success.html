@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Payment Receipt</title>
+  <link rel="stylesheet" href="receipt.css" />
+  <link rel="shortcut icon" href="images/logo.png" />
+</head>
+<body>
+  <div class="receipt-container">
+    <div class="receipt-header">
+      <h1>Payment Receipt</h1>
+      <p>Thank you for your purchase!</p>
+    </div>
+
+    <div class="customer-info">
+      <h2>Customer Information</h2>
+      <p><strong>Name:</strong> <span id="customerName"></span></p>
+      <p><strong>Email:</strong> <span id="customerEmail"></span></p>
+      <p><strong>Phone:</strong> <span id="customerPhone"></span></p>
+      <p><strong>Address:</strong> <span id="customerAddress"></span></p>
+      <p><strong>Delivery Date and Time:</strong> <span id="deliveryDatetime"></span></p>
+    </div>
+
+    <div class="order-summary">
+      <h2>Order Summary</h2>
+      <div id="purchasedItems"></div>
+      <p><strong>Delivery Option:</strong> <span id="deliveryOption"></span></p>
+      <p class="total-amount"><strong>Total Paid:</strong> ₦<span id="totalPaid"></span></p>
+    </div>
+
+    <div class="receipt-actions">
+      <p id="downloadReceipt" class="receipt-button">Download Receipt</p>
+      <a href="menu.html" class="back-button" id="backToMenuBtn">Back to Menu</a>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+  <script>
+    function getOrderIdFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('orderId');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const orderId = getOrderIdFromURL();
+
+      if (!orderId) {
+        alert('No order ID specified. Please complete your purchase.');
+        window.location.href = 'checkout.html';
+        return;
+      }
+
+      fetch(`http://localhost:3000/order/${orderId}`)
+        .then(res => {
+          if (!res.ok) throw new Error('Order not found');
+          return res.json();
+        })
+        .then(order => {
+          // Fill customer info
+          document.getElementById('customerName').textContent = order.fullName || 'N/A';
+          document.getElementById('customerEmail').textContent = order.email || 'N/A';
+          document.getElementById('customerPhone').textContent = order.number || 'N/A';
+          document.getElementById('customerAddress').textContent = order.address || 'N/A';
+          document.getElementById('deliveryDatetime').textContent = order.deliverydatetime || 'N/A';
+          document.getElementById('deliveryOption').textContent = order.deliveryOption || 'N/A';
+
+          // Format totalPaid without currency symbol (to avoid double ₦)
+          document.getElementById('totalPaid').textContent = order.totalAmount
+            ? parseFloat(order.totalAmount).toFixed(2)
+            : '0.00';
+
+          // Fill purchased items
+          const purchasedItemsContainer = document.getElementById('purchasedItems');
+          const cartItems = order.cartItems || [];
+          if (cartItems.length === 0) {
+            purchasedItemsContainer.innerHTML = '<p>No items purchased.</p>';
+          } else {
+            purchasedItemsContainer.innerHTML = '';
+            cartItems.forEach(item => {
+              const p = document.createElement('p');
+              p.textContent = `${item.quantity} x ${item.name} - ₦${(item.price * item.quantity).toFixed(2)}`;
+              purchasedItemsContainer.appendChild(p);
+            });
+          }
+        })
+        .catch(err => {
+          alert(err.message);
+          window.location.href = 'checkout.html';
+        });
+
+      // Download PDF receipt
+      document.getElementById('downloadReceipt').addEventListener('click', () => {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        const logo = new Image();
+        logo.src = 'images/logo.png';
+        logo.onload = () => {
+          doc.addImage(logo, 'PNG', 10, 10, 40, 40);
+
+          doc.setFontSize(26);
+          doc.setFont('helvetica', 'bold');
+          doc.text('Payment Receipt', 105, 60, null, null, 'center');
+          doc.setFontSize(12);
+          doc.text('Thank you for your purchase!', 105, 70, null, null, 'center');
+          doc.line(10, 75, 200, 75);
+
+          doc.setFontSize(14);
+          doc.text('Customer Information', 10, 90);
+          doc.setFont('helvetica', 'normal');
+          doc.text(`Name: ${document.getElementById('customerName').textContent}`, 10, 100);
+          doc.text(`Email: ${document.getElementById('customerEmail').textContent}`, 10, 110);
+          doc.text(`Phone: ${document.getElementById('customerPhone').textContent}`, 10, 120);
+          doc.text(`Address: ${document.getElementById('customerAddress').textContent}`, 10, 130);
+          doc.text(`Delivery Date and Time: ${document.getElementById('deliveryDatetime').textContent}`, 10, 140);
+
+          doc.line(10, 145, 200, 145);
+
+          doc.setFontSize(14);
+          doc.setFont('helvetica', 'bold');
+          doc.text('Order Summary', 10, 155);
+
+          const cartItems = document.querySelectorAll('#purchasedItems p');
+          let startY = 165;
+          doc.setFont('helvetica', 'normal');
+          cartItems.forEach(item => {
+            doc.text(item.textContent, 10, startY);
+            startY += 10;
+          });
+
+          const pageHeight = doc.internal.pageSize.height;
+          const footerY = pageHeight - 20;
+          doc.line(10, footerY - 5, 200, footerY - 5);
+          doc.setFontSize(10);
+          doc.text(
+            'Contact Us: Phone: +234 123 456 7890 | Email: contact@yourbusiness.com | Address: 162 Ikotun Idimu Road, Nobex BusStop',
+            10,
+            footerY
+          );
+          doc.text(`Delivery Option: ${document.getElementById('deliveryOption').textContent}`, 10, startY);
+          doc.text(`Total Paid: ₦${document.getElementById('totalPaid').textContent}`, 10, startY + 10);
+
+          doc.save('receipt.pdf');
+        };
+      });
+
+      // Back to menu button clears localStorage and navigates
+      document.getElementById('backToMenuBtn').addEventListener('click', () => {
+        localStorage.removeItem('cartItems');
+        localStorage.removeItem('receiptDetails');
+        window.location.href = 'menu.html';
+      });
+    });
+  </script>
+</body>
+</html>

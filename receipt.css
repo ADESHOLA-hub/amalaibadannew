@@ -1,0 +1,74 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    background-color: rgb(255, 255, 255);
+    background: url(images/foodback.jpg)no-repeat;
+    background-size: cover;
+}
+
+.receipt-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.874);
+    box-shadow: 2px 8px 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.receipt-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.receipt-header h1 {
+    font-size: 32px;
+    color: #000000;
+}
+
+.receipt-header p {
+    font-size: 18px;
+    color: #000000;
+}
+
+.customer-info, .order-summary {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+.total-amount {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.receipt-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.receipt-button, .back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d58610;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.receipt-button:hover, .back-button:hover {
+    background-color: #a75c06;
+}
+

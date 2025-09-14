@@ -1,0 +1,250 @@
+/* checkout.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d58610;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    width: 30px;
+    top: 25px;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+    color: #d58610;
+}
+
+.step-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.step {
+    padding: 10px;
+    border: 2px solid #d58610;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background-color: #fff;
+    color: #d58610;
+}
+
+.step.active {
+    background-color: #d58610;
+    color: #fff;
+}
+
+.separator {
+    margin: 0 10px;
+}
+
+.checkout-container {
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 40px auto;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.billing-info, .order-details {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+}
+
+.billing-info {
+    flex: 1.5;
+}
+
+.order-details {
+    flex: 1;
+    border: 1px solid #ddd;
+}
+
+h2 {
+    font-size: 24px;
+    color: #d58610;
+    border-bottom: 2px solid #f0b674;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="datetime-local"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 6px;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    max-width: 600px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    border-color: #d58610;
+    box-shadow: 0px 0px 8px rgba(213, 134, 16, 0.3);
+    outline: none;
+}
+
+.billing-button,
+.checkout-button {
+    background-color: #d58610;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.billing-button:hover,
+.checkout-button:hover {
+    background-color: #a75c06;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.cart-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.delivery-option {
+    padding-top: 15px;
+    font-size: 1em;
+    color: #555;
+}
+
+.delivery-option label {
+    font-weight: bold;
+}
+
+.delivery-option select {
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    width: 100%;
+}
+
+.total-price {
+    font-size: 1.2em;
+    color: #d58610;
+    text-align: right;
+    padding: 15px 0;
+}
+
+.total-price h3 {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
+    .page-header {
+        padding: 15px;
+    }
+
+    .arrow {
+        left: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .step-indicator {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .page-header {
+        padding: 10px;
+    }
+
+    .arrow {
+        left: 14px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    .step-indicator {
+        font-size: 0.9em;
+    }
+
+    .step {
+        width: 25px;
+        height: 25px;
+        padding: 6px;
+    }
+
+    .checkout-container {
+        padding: 0 10px;
+    }
+
+    .billing-button,
+    .checkout-button {
+        max-width: 150px;
+    }
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amala Ibadan - Contact Us</title>
+    <link rel="stylesheet" href="contactstyle.css">
+    <link rel="shortcut icon" href="images/logo.png">
+</head>
+<body>
+    <header id="navbar">
+        <nav>
+            <div class="logo"><img src="images/logo2.png" alt="Amala Ibadan Logo"></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" style="color: #e08414;">Contact</a></li>
+            </ul>
+            <img src="images/menu3.png" alt="Menu Icon" class="menu-btn">
+        </nav>
+    </header>
+     <section class="hero-contact">
+    <h1>We’d Love to Hear From You!</h1>
+    <p>Have questions, feedback, or want to plan your next big event? We're here for you.</p>
+     </section>
+
+      <section class="main-contact">
+  <div class="contact-form">
+    <h2>Send Us a Message</h2>
+    <form action="submit_form.php" method="POST">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Full Name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Your Email Address" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Phone Number (optional)" />
+
+      <label for="inquiry-type">Reason for Contact</label>
+      <select id="inquiry-type" name="inquiry-type" required>
+        <option value="">Select a reason...</option>
+        <option value="catering">Catering / Event Booking</option>
+        <option value="bulk">Bulk Orders</option>
+        <option value="feedback">Feedback</option>
+        <option value="general">General Inquiry</option>
+      </select>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="6" placeholder="Type your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <div class="quick-contact">
+    <h2>Quick Contact Info</h2>
+    <p><strong>Email:</strong> amalaibadanofficial@gmail.com</p>
+    <p><strong>Phone:</strong> +234 704 777 7521</p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/2347047777521" target="_blank">Chat With Us</a></p>
+    <p><strong>Hours:</strong> Mon–Sun: 9:00 AM – 9:00 PM</p>
+  </div>
+</section>
+
+
+  <section class="branch-listing">
+    <h2>Our Locations</h2>
+    <div class="branches">
+      <div class="branch-card">
+        <h3>Nobex, Lagos</h3>
+        <p>162 Ikotun Idimu Road, Nobex BusStop</p>
+        <p>📞 +234 704 777 7521</p>
+      </div>
+      <div class="branch-card">
+        <h3>Alagbado</h3>
+        <p>82 AIT Road, Alagbado, Lagos</p>
+        <p>📞 +234 916 977 4773</p>
+      </div>
+      <div class="branch-card">
+        <h3>Grocery Bazaar Meiran</h3>
+        <p>71 Meiran Road, Lagos</p>
+        <p>📞 +234 906 658 4259</p>
+      </div>
+      <!-- Add more branch cards as needed -->
+    </div>
+  </section>
+
+  <section class="map-hours">
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="hours-box">
+      <h3>Opening Hours</h3>
+      <ul>
+        <li><strong>Monday – Sunday:</strong> 9:00 AM – 9:00 PM</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="socials">
+    <h2>Follow Us</h2>
+    <p>Stay updated on promos, events, and more!</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/p/%C3%80m%C3%A0l%C3%A0-Ibadan-100083337152799/" target="_blank"><img src="images/facebook.webp" alt="Facebook"></a>
+      <a href="https://www.instagram.com/amalaibadanofficial/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+      <a href="https://wa.me/2347047777521" target="_blank"><img src="images/whatsapp.jpg" alt="WhatsApp"></a>
+      <a href="https://www.tiktok.com/@amalaibadanofficial" target="_blank"><img src="images/tiktok.avif" alt="TikTok"></a>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-cards">
+      <blockquote>
+        “The catering for our wedding was perfect. So much flavor and elegance!”  
+        <footer>– Mrs. Olatunji</footer>
+      </blockquote>
+      <blockquote>
+        “Very responsive, fast delivery, and the food is always 🔥🔥🔥”  
+        <footer>– David I.</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="policies">
+    <h2>Helpful Info</h2>
+    <ul>
+      <li>📩 We typically respond within 1–2 hours during open hours.</li>
+      <li>🕓 For catering, we recommend at least 48 hours notice.</li>
+      <li>🔁 Refunds for orders can only be processed if issues are reported within 24 hours.</li>
+    </ul>
+  </section>
+
+  <footer class="footer-signup">
+    <h2>Join Our Mailing List</h2>
+    <form action="newsletter_signup.php" method="POST">
+      <input type="email" name="newsletter" placeholder="Your email address..." required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </footer>
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navlinks = document.querySelector('.nav-links');
+
+        menuBtn.addEventListener('click', () => {
+            navlinks.classList.toggle('mobile-menu');
+        });
+
+        document.addEventListener('scroll', () => {
+            var scroll_position = window.scrollY;
+            if (scroll_position > 250) {
+                navbar.style.backgroundColor = '#4138388f';
+            } else {
+                navbar.style.backgroundColor = 'transparent';
+            }
+        });
+    </script>
+</body>
+</html>

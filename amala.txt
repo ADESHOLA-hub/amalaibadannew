@@ -1,0 +1,295 @@
+-----BEGIN RSA PRIVATE KEY-----
+MIIEowIBAAKCAQEA5Id54ogomMbddRQOTJdGKFHKNxUu//2VwEuHQvmn9PxY+AE2
+gsDFakhnYYVJfyxV+1kQK9d8TZIagSk/CEXX3C0uqqLzbNBvPZDLXlH/xQpAbV7q
+0yFLTwwDW8omeZIC8rO7SC9rMyKceQn3oJfeMmiN9W66L4763p95TF8aDBqsoKo2
+AMpz0fqJeot51D9b9jKpJNR7o/bC5U5LwFB6gdJVvkNTueRwhQ4rg7g3rFnjCFgF
+2Tl2sezsIH9TGDY4DgjmSQGjA2OkNTJhihXf6qhW6T0vRjU3ewwEEtYlXVWO8K0i
+A6OC67Mw+ilL4SgQbLWmCZQMdk7GqGk1c26GQwIDAQABAoIBAF4RykFObO+ehJBq
+BgzPBEkaidOsu6ESYG88Z9xQ6is1KOZFkYu3EExUq4GAHSXlOStymO6DEB7aMmDS
+eqjMHzP5wUjqNKupDPFZxez4cgFI3AZpWN45yUcrmcJR7w6B5QbEpyXqpwTwjVph
+mPYZLZSwZycNQkTLZUb4fDTMvOsX1K7j9IH+sn1421VDSrrGqWfSmwjbiSNVqz5r
+uk6ip96BocAURYdvEQbw6+urRz0GsXbP+cKL8eJCIhQUtBJatjVvVn6JIthuXVQm
+r1/oHfzz07gazT8Ap0+C+N3bVjcC5K4GcxL0nmaJr/MUREFlH/3/hvCTbLTP9aQf
+hJwvmckCgYEA88Xl40oXqprb9UeaxoDkOcWNoNyZygtD33v8FckMfWAq38WQVGMs
+SB9f/ValQDH+igjIuw0dB99zM1sGzssEXHLS3UokYvC/ISO7GJv6r9KWzjXdU7U4
+T3as1VRyjnSCnlvWbAsvV3BNu/7UHZ8C4un+blmX3G+GMxAAEN/zrF0CgYEA7/3Y
+ACyE1To8/D3PMWJkqzlnRo7Jy+JBFX8ZltKKk66PWGx4wRIuGWdSlDPIBN1matV4
+JrQa8s0V0mj/PRw7DEIF4FMRlOUIpe2RGdsyxTs6pVmvAb6nFGhewu8zj+ciQak4
+mEE93f+MEyphRGkFNpdIvZf99aAeezTVz3eM0x8CgYEA2+HDjJLGaiKpCMN/vlGA
+iwPAzjptlas3m5wQM+5XD7fwtEtV9mhGBwAV60N+ZzsxJ3zo4p/fcbyCAu62Y00I
+MAN6ZBR+YahaHiBGoNoA8xr24CYB74Fku3iGSR6U/h3lu8WG0Yn9N9eaplojJlzJ
+k7gQwaSasEEAQYrLJG19NBkCgYBilSqqf58dG+w7TYST67Agqdbjo/n+93T2yJwR
+WXE1UwptLzm3TamEI+5HFLJAVVYh4oiVlXxQarBhG2Jljvgug9x4FodtW1vfFSR6
+s5E6dacUjy+VjuSBPJJYjvvmS/LFeCbYXEx2qee3Y7xK5r0OfLyTrSDUSi7bO4vs
+ylYdzwKBgAamifgi1R3xpc2TWDPbpY2V4u2q29dGhiwZ1B4zHvYgK6WC/aNT5UZx
+JoROwtIGYcsxmv9sIdCVLw1cpPbzhRYxWRz79caplNoKiTinzgJONc/FPPPDCE6z
+jpEcUgNcaTZRrSi1hj7X4erXZxUwd3vhsR0CrnGXfg5eHcXO7tbi
+-----END RSA PRIVATE KEY-----
+
+
+
+
+-----BEGIN CERTIFICATE REQUEST-----
+MIIC/TCCAeUCAQAwgYsxFDASBgNVBAoMC0FtYWxhaWJhZGFuMQ4wDAYDVQQHDAVs
+YWdvczELMAkGA1UEBhMCTkcxDzANBgNVBAgMBmlrb3R1bjEsMCoGCSqGSIb3DQEJ
+ARYdYWd1bmJpYWRlYWRlc2hvbGE1OEBnbWFpbC5jb20xFzAVBgNVBAMMDmFtYWxh
+aWJhZGFuLm5nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2ZJ5XwHU
+xPu5Slp9pRHFAWPiQ+WdgdRTuxA7dD7CFQMoozqwTKhwlocbsNqMKGEyCpdI5meG
+Kcp4rKJI+XiUC/1MKXeyGXYHBKDHXdYngIWshRZvCIJ92I9dPxQK3oNCTV8d1rAk
+9fgzsKKsR4S5+FN+EoaGIgVkOaaeaeCHvIoaU/zQGxIJ0z2+TY+OL+i8UP8PSlwh
+HUXRGk34xbIl2OgfWHO0A1DKIAuyACy+tzSkQZ9EYN2vzha9DLu5jYPKmfkJ7n2y
+KtnhOeaCUalODj5SqBLJKysFpI92cr1e4cgNI+SSeD0ADo8Hq32wQDcVSOORfvpC
+grNlyDGnBXu20wIDAQABoCwwKgYJKoZIhvcNAQkOMR0wGzAZBgNVHREEEjAQgg5h
+bWFsYWliYWRhbi5uZzANBgkqhkiG9w0BAQsFAAOCAQEASi0G9NZ3MCYfvnSby6lM
+BHAsbxAB2LrdOiPrs0Y6F7tKYRQPFIuWnaKJo6u82SQ1qc04/iSmi5gCpsBjisql
+/aBguNxlMPXs43t/tRev+ratinAEZv/lWGL+lE30xzfbc/cLWOWOrkxUvVgkO5Gq
+w0Zd9JkjWMjjkO++xN+qIVWf5vq/IM6j3GIKuY8xjvxvoHMfPS/FY6VvbF9wA9rE
+eH2siz+fsQnN6E3mfmMeI4I699OfVt28zuGPSbVPu5iF4HWRDc8gBDgvYpE5/kK1
+kvvnhp4T3mrh+1JoQhYUKS19K04kinMRNbcu0Z9c+KKJimsNAFuyf4q84hhaFwhr
+xw==
+-----END CERTIFICATE REQUEST-----
+
+
+
+-----BEGIN CERTIFICATE-----
+MIIFAjCCA+qgAwIBAgISBNRmyHgAs4uXi4faYk0zb5qwMA0GCSqGSIb3DQEBCwUA
+MDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQD
+EwNSMTEwHhcNMjQxMjI0MjE1OTIyWhcNMjUwMzI0MjE1OTIxWjAbMRkwFwYDVQQD
+DBAqLmFtYWxhaWJhZGFuLm5nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+AQEA5Bop1j/KdPTIHudw2MfTggLw1yO1EOpea6eOzZoq7FRX2/cj1p64Gr9J4rsu
+2URh6n0nlnMyx2OROD4TFx+26iQ7895265lWYdry7v76sKkru4FUpRhWs427phRL
+gNDC63iJLam3FV75aJwj5PY6i2gd4SYa9ml0s7uFJ+iMPdvJ4SxUF3W+22/SLU8Q
+6sfXG1WuCg8LVwU3x791ny0dZa+PeCHpbf0AD4tMYk4RAvxJHgT+ZMZOB7FJtTIX
+dVYJBYGt6qhi5Cdah5Hk+xgzDBnjtj8YEvo2OTjCdZEeyTlveQnWRYuEj3WI7+XY
+2CujvJ8ECIJntSlr4isRec6shwIDAQABo4ICJjCCAiIwDgYDVR0PAQH/BAQDAgWg
+MB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8EAjAAMB0G
+A1UdDgQWBBRV/SGsAGQTdVhiorwMr9890qJw1jAfBgNVHSMEGDAWgBTFz0ak6vTD
+wHpslcQtsF6SLybjuTBXBggrBgEFBQcBAQRLMEkwIgYIKwYBBQUHMAGGFmh0dHA6
+Ly9yMTEuby5sZW5jci5vcmcwIwYIKwYBBQUHMAKGF2h0dHA6Ly9yMTEuaS5sZW5j
+ci5vcmcvMCsGA1UdEQQkMCKCECouYW1hbGFpYmFkYW4ubmeCDmFtYWxhaWJhZGFu
+Lm5nMBMGA1UdIAQMMAowCAYGZ4EMAQIBMIIBBgYKKwYBBAHWeQIEAgSB9wSB9ADy
+AHcAouMK5EXvva2bfjjtR2d3U9eCW4SU1yteGyzEuVCkR+cAAAGT+uQYigAABAMA
+SDBGAiEA4VcmPH9pvI44vlD6Sm8+TTVRpsthimmpeXGpTh577qYCIQDWklsfmU+m
+TgYWD+DNmv/Onu1KiEc7wjTs3YxPs2NhxQB3ABNK3xq1mEIJeAxv70x6kaQWtyNJ
+zlhXat+u2qfCq+AiAAABk/rkGU0AAAQDAEgwRgIhAPMe1ZZoISMwhnM3NHoqc8PS
+CIt2rLU1wnkaFSgP4sNJAiEAkMXzNIugOCV11r1Z1GR7TR9D1qz06X64kUSfVexR
+Em8wDQYJKoZIhvcNAQELBQADggEBACfK0b90ZH3HKOa6WDTzeUsNHFjNPkfqaHXE
+66dZ1WgayUo0TVEMOGI5t9EkMsCidy1ies+bYJALeh+j1Bd2H4K9D6G6Ax1YnOAp
+sVMkf3WwksgciiUIAEuoC5w9gM2Yj1DhBIGNg/aqm0rLvIbZupO96MTx1ko9N5ka
+LayteCwwF2P3ReqbX6aEzVmy1MfEbzIymYFqRLL0o7HMCnoHecFobUJYb/m8HUD0
+kPV3Y6TL+/iohe8CNp0sMKdmQx130FajV0vB8tmCgNoFGJWVo4vzCFJ+VBtEigFN
+zTkKIIvj5TFVVRUictgf61+PZdNTK1VbA+cPjgw4/4EDf9c2ZP8=
+-----END CERTIFICATE-----
+
+
+fetch('http://localhost:3000/submit-order', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(receiptDetails),
+})
+.then(res => res.json())
+.then(data => {
+  if (data.success) {
+    window.location.href = `payment_success.html?orderId=${data.orderId}`;
+  } else {
+    alert('Failed to submit order.');
+  }
+})
+.catch(() => {
+  alert('Error submitting order.');
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const orderId = urlParams.get('orderId');
+
+  if (!orderId) {
+    alert('No order ID found');
+    return;
+  }
+
+  fetch(`http://localhost:3000/order/${orderId}`)
+    .then(res => {
+      if (!res.ok) throw new Error('Order not found');
+      return res.json();
+    })
+    .then(order => {
+      document.getElementById('receiptFullName').textContent = order.fullName;
+      document.getElementById('receiptEmail').textContent = order.email;
+      document.getElementById('receiptTotal').textContent = `₦${order.totalAmount}`;
+      // Add other fields as needed
+    })
+    .catch(err => {
+      alert(err.message);
+    });
+});
+
+script for checkout
+
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const cartItemsContainer = document.getElementById('cartItems');
+    const totalAmountElement = document.getElementById('totalAmount');
+    const deliveryOptions = document.getElementById('deliveryOptions');
+    const selectedOptionDisplay = document.getElementById('selectedOptionDisplay');
+    const nextButton = document.getElementById('nextButton');
+
+    let baseTotal = 0;
+
+    // Load cart items
+    if (cartItems.length === 0) {
+        cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+        totalAmountElement.textContent = '₦0.00';
+    } else {
+        cartItems.forEach(item => {
+            baseTotal += item.price * item.quantity;
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.innerHTML = `<p>${item.quantity} x ${item.name} - ₦${(item.price * item.quantity).toFixed(2)}</p>`;
+            cartItemsContainer.appendChild(cartItem);
+        });
+        totalAmountElement.textContent = `₦${baseTotal.toFixed(2)}`;
+    }
+
+    // Update total price and save delivery option in localStorage
+    function updateTotalWithDelivery() {
+        const deliveryFee = parseFloat(deliveryOptions.value) || 0;
+        const totalWithDelivery = baseTotal + deliveryFee;
+
+        const selectedDeliveryOption = deliveryOptions.options[deliveryOptions.selectedIndex].text;
+        localStorage.setItem('selectedDeliveryText', selectedDeliveryOption);
+        localStorage.setItem('selectedDeliveryValue', deliveryFee);
+
+        totalAmountElement.textContent = `₦${totalWithDelivery.toFixed(2)}`;
+        selectedOptionDisplay.textContent = `Selected Delivery Option: ${selectedDeliveryOption}`;
+    }
+
+    deliveryOptions.addEventListener('change', updateTotalWithDelivery);
+
+    // Display saved delivery option on page load
+    const savedDeliveryText = localStorage.getItem('selectedDeliveryText') || "None";
+    const savedDeliveryValue = parseFloat(localStorage.getItem('selectedDeliveryValue')) || 0;
+    selectedOptionDisplay.textContent = `Selected Delivery Option: ${savedDeliveryText}`;
+
+    if (savedDeliveryValue) {
+        totalAmountElement.textContent = `₦${(baseTotal + savedDeliveryValue).toFixed(2)}`;
+        deliveryOptions.value = savedDeliveryValue; 
+    }
+
+    nextButton.addEventListener('click', () => {
+        const fullName = document.getElementById('fullName').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const number = document.getElementById('number').value.trim();
+        const address = document.getElementById('address').value.trim();
+        const city = document.getElementById('city').value.trim();
+        const deliveryDateTime = document.getElementById('deliverydatetime').value.trim();
+
+        if (!fullName || !email || !number || !address || !city || !deliveryDateTime) {
+            alert("Please fill in all required fields before proceeding.");
+            return;
+        }
+
+        // Save delivery date and time
+        localStorage.setItem('deliveryDateTime', deliveryDateTime);
+
+        document.getElementById('billingInfoSection').style.display = 'none';
+        document.getElementById('orderDetailsSection').style.display = 'block';
+
+        document.getElementById('step1').classList.remove('active');
+        document.getElementById('step2').classList.add('active');
+    });
+});
+
+function payWithPaystack() {
+    const fullName = document.getElementById('fullName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const number = document.getElementById('number').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const city = document.getElementById('city').value.trim();
+    const deliveryDateTime = localStorage.getItem('deliveryDateTime');
+    const amountText = document.getElementById('totalAmount').textContent.replace('₦', '').trim();
+    const amountInKobo = Math.round(parseFloat(amountText) * 100);
+    const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+    const deliveryOption = localStorage.getItem('selectedDeliveryText');
+
+    if (!fullName || !email || !number || !address || !city || !deliveryDateTime) {
+        alert("Please fill in all required details.");
+        return;
+    }
+    if (isNaN(amountInKobo) || amountInKobo <= 0) {
+        alert("Total amount is invalid.");
+        return;
+    }
+
+    const handler = PaystackPop.setup({
+        key: 'pk_test_596e2346517f3ca50b54dc1cb025d1e2c39d0fbe',
+        email: email,
+        amount: amountInKobo,
+        currency: 'NGN',
+        ref: '' + Math.floor((Math.random() * 1000000000) + 1),
+        callback: function(response) {
+            alert('Payment successful. Transaction reference: ' + response.reference);
+
+            // Prepare receipt details
+            const receiptDetails = {
+                fullName,
+                email,
+                number,
+                address,
+                city,
+                deliverydatetime: deliveryDateTime,
+                cartItems,
+                totalAmount: amountText,
+                transactionRef: response.reference,
+                deliveryOption,
+            };
+
+            // Save receipt details in localStorage
+            localStorage.setItem('receiptDetails', JSON.stringify(receiptDetails));
+
+            // Send order details to server
+            fetch('http://localhost:3000/submit-order', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(receiptDetails),
+})
+.then(res => res.json())
+.then(data => {
+  if (data.success) {
+    window.location.href = `payment_success.html?orderId=${data.orderId}`;
+  } else {
+    alert('Failed to submit order.');
+  }
+})
+.catch(() => {
+  alert('Error submitting order.');
+});
+
+        },
+        onClose: function() {
+            alert('Transaction was not completed.');
+        }
+    });
+
+    handler.openIframe();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const deliveryInput = document.getElementById('deliverydatetime');
+
+    function setMinDateTime() {
+        const now = new Date();
+        now.setMinutes(now.getMinutes() - now.getTimezoneOffset()); 
+        const minDateTime = now.toISOString().slice(0,16); 
+        deliveryInput.min = minDateTime;
+    }
+
+    setMinDateTime();
+})
+</script>  
